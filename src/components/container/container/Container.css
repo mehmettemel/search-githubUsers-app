@@ -1,0 +1,9 @@
+.container {
+  padding: 1em;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
