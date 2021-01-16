@@ -22,8 +22,8 @@ function User() {
 
   console.log(name)
   return (
-    <Row>
-      <Card style={{ width: '40%', margin: '0 auto', minWidth: '300px' }}>
+    <Row style={{ minHeight: '230px' }}>
+      <Card>
         <Row align='middle' justify='start'>
           <Avatar size={64} src={avatar_url} alt={name} />
           <div style={{ marginLeft: '15px' }}>
@@ -33,7 +33,7 @@ function User() {
           <Button
             style={{
               margin: '1em auto',
-              backgroundColor: `${blue[2]}`,
+              backgroundColor: `${purple[6]}`,
               color: 'white',
             }}
             shape='round'
