@@ -33,9 +33,8 @@ function User() {
           <Button
             style={{
               margin: '1em auto',
-              backgroundColor: `${purple[6]}`,
-              color: 'white',
             }}
+            type='primary'
             shape='round'
             size='large'
           >
