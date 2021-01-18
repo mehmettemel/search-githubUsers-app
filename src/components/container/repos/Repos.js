@@ -66,7 +66,7 @@ function Repos() {
   forks = Object.values(forks).slice(-5).reverse()
 
   return (
-    <>
+    <div>
       <Row align='middle' justify='center' gutter={[24, 24]}>
         <Col
           xs={24}
@@ -75,6 +75,7 @@ function Repos() {
           style={{
             height: '500px',
             marginTop: '1em',
+            zIndex: '-1',
           }}
         >
           <Pie3D data={mostUsed} />
@@ -83,7 +84,7 @@ function Repos() {
           xs={24}
           l={12}
           xl={10}
-          style={{ height: '500px', marginTop: '1em' }}
+          style={{ height: '500px', marginTop: '1em', zIndex: '-1' }}
         >
           <Donut2D data={mostUsed} />
         </Col>
@@ -97,6 +98,7 @@ function Repos() {
           style={{
             height: '500px',
             marginTop: '1em',
+            zIndex: '-1',
           }}
         >
           <Column data={stars} />
@@ -105,13 +107,13 @@ function Repos() {
           xs={24}
           l={12}
           xl={10}
-          style={{ height: '500px', marginTop: '1em' }}
+          style={{ height: '500px', marginTop: '1em', zIndex: '-1' }}
         >
           <Bar data={forks} />
         </Col>
         {/* <ChartComponent data={chartData} /> */}
       </Row>
-    </>
+    </div>
   )
 }
 
