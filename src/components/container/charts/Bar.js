@@ -24,6 +24,7 @@ const Bar = ({ data }) => {
     width: '100%',
     height: '100%',
     dataFormat: 'json', // Data type
+    theme: 'gammel',
     dataSource: {
       // Chart Configuration
       chart: {

@@ -10,6 +10,7 @@ ReactDOM.render(
     domain='temelion2.us.auth0.com'
     clientId='O20D6UqfkZE2keyOaBuLDyiCEAd8Cmn8'
     redirectUri={window.location.origin}
+    cacheLocation='localstorage'
   >
     <React.StrictMode>
       <GithubProvider>
