@@ -22,69 +22,71 @@ function User() {
 
   console.log(name)
   return (
-    <Row style={{ minHeight: '230px' }}>
-      <Card>
-        <Row align='middle' justify='start'>
-          <Avatar size={64} src={avatar_url} alt={name} />
-          <div style={{ marginLeft: '15px' }}>
-            <Title level={3}>{name}</Title>
-            <Text>@{twitter_username || 'twitter'}</Text>
-          </div>
-          <Button
+    <Card>
+      <Row align='middle' justify='start'>
+        <Avatar size={64} src={avatar_url} alt={name} />
+        <div style={{ marginLeft: '15px' }}>
+          <Title level={3}>{name}</Title>
+          <Text>@{twitter_username || 'twitter'}</Text>
+        </div>
+        <Button
+          style={{
+            textAlign: 'center',
+            marginLeft: 'auto',
+            // margin: '1em auto',
+          }}
+          type='primary'
+          shape='round'
+          size='large'
+        >
+          <a href={html_url}>Follow</a>
+        </Button>
+      </Row>
+      <Row>
+        <Text style={{ marginTop: '1em' }} strong>
+          {bio}
+        </Text>
+      </Row>
+      <Row align='middle' style={{ marginTop: '.5em' }}>
+        <Text
+          style={{
+            marginRight: '1em',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <IoLocationSharp size='1.2em' style={{ marginRight: '5px' }} />
+          {location || 'No Location'}
+        </Text>
+      </Row>
+      <Row>
+        <Text
+          style={{
+            marginRight: '1em',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <IoBusiness size='1.2em' style={{ marginRight: '5px' }} />
+          {company || 'No Company'}
+        </Text>
+      </Row>
+      <Row>
+        <Text>
+          <a
+            href={`${blog}`}
             style={{
-              margin: '1em auto',
-            }}
-            type='primary'
-            shape='round'
-            size='large'
-          >
-            <a href={html_url}>Follow</a>
-          </Button>
-        </Row>
-        <Row>
-          <Text style={{ marginTop: '1em' }} strong>
-            {bio}
-          </Text>
-        </Row>
-        <Row align='middle' style={{ marginTop: '.5em' }}>
-          <Text
-            style={{
-              marginRight: '1em',
               display: 'flex',
               alignItems: 'center',
+              textOverflow: 'ellipsis',
             }}
           >
-            <IoBusiness size='1.2em' style={{ marginRight: '5px' }} />
-            {company || 'No Company'}
-          </Text>
-          <Text
-            style={{
-              marginRight: '1em',
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <IoLocationSharp size='1.2em' style={{ marginRight: '5px' }} />
-            {location || 'No Location'}
-          </Text>
-          <Row>
-            <Text>
-              <a
-                href={`${blog}`}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  textOverflow: 'ellipsis',
-                }}
-              >
-                <IoLink size='1.2em' style={{ marginRight: '5px' }} />
-                {blog}
-              </a>
-            </Text>
-          </Row>
-        </Row>
-      </Card>
-    </Row>
+            <IoLink size='1.2em' style={{ marginRight: '5px' }} />
+            {blog}
+          </a>
+        </Text>
+      </Row>
+    </Card>
   )
 }
 
